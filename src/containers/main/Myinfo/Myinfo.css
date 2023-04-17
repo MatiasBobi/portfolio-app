@@ -1,0 +1,61 @@
+.myinfo__container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+}
+
+.item{
+    flex: 1;
+}
+.item:nth-child(2){
+    flex: 3;
+}
+.title_container{
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.mydescription__container{
+    padding-top: 20px;
+    width: 90%;
+    text-align: center;
+} 
+
+.buttonCV_container{
+    display: flex;
+    place-items: center;
+}
+
+.buttonCV_link{
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    border: transparent;
+    color: rgb(14, 14, 226);
+    background-color: rgb(221, 220, 220);
+    cursor: pointer;
+}
+
+.hover {
+    --c:linear-gradient(#1d4be4 0 0); 
+    padding-bottom: .15em;
+    background: var(--c), var(--c);
+    background-size: 3.3em .1em;
+    background-position:50% 100%;
+    background-repeat: no-repeat;
+    transition: .3s linear, background-size .3s .2s linear;
+  }
+  .hover:hover {
+    background-size: 40% .1em;
+    background-position: 10% 100%, 90% 100%;
+  }
+.hoverIcon_on{
+    transform: translateY(5px);
+    transition: all 0.3s ease-in-out;
+}
+.hoverIcon_off{
+    transform: translateY(0px);
+    transition: all 0.3s ease-in-out;
+}

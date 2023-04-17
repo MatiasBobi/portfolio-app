@@ -1,0 +1,15 @@
+.Knowledge_container{
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.frontEnd_container , .backEnd_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin-top: 30px;
+}
+
