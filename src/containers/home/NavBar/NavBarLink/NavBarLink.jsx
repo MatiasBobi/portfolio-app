@@ -1,7 +1,9 @@
+
+
 const NavBarLink = (props) =>{
     const {text, keyId} = props
     return(
-        <li key={keyId}>
+        <li className='links' key={keyId}>
             {text}
         </li>
     )

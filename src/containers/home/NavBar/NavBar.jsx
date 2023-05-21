@@ -21,7 +21,7 @@ const NavBar = () => {
         </div>
         <div className={`navLink__container${buttonMobile ? "_closed" : "_open"}`}>
           <ul className="navLinks">
-            <NavBarLink text="Home" keyId={1} />
+            <NavBarLink text="Inicio" keyId={1} />
             <NavBarLink text="Quien soy" keyId={2} />
             <NavBarLink text="Conocimientos" keyId={3} />
             <NavBarLink text="Contacto" keyId={4} />
@@ -29,7 +29,6 @@ const NavBar = () => {
           </ul>
         
           <div className="session__container">
-          
             <div className="textSession">
               Iniciar sesión
             </div>

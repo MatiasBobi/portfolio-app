@@ -12,7 +12,9 @@ const CardInfo = (props) =>{
       <div className="academy__container">
         <img src={academy}alt="" />
         <h3>{title}</h3>
-        <p>{text}</p>
+        <p>
+          {text}
+        </p>
         <a href={link}>{textLink}</a>
       </div>
     </div>

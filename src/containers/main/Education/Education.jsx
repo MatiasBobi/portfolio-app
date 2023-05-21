@@ -2,9 +2,18 @@ import "./Education.css";
 import unt from "../../../assets/img/unt.png";
 import numen from "../../../assets/img/numen.png";
 import CardInfo from "./CardInfo/CardInfo";
+import { useInView } from "react-intersection-observer";
 const Education = () => {
+
+  const {ref: myRef, inView: myElementIsVisible} = useInView()
+
+  /*
+  const {ref: myRef, inView: myElementIsVisible} = useInView()
+  ref={myRef} className={`education__container elementVisibility${myElementIsVisible ? '_visible' : '_hidden'}`}
+  */
+  
   return (
-    <div className="education__container">
+    <div ref={myRef} className={`education__container elementVisibility${myElementIsVisible ? '_visible' : '_hidden'}`}>
       <h2>Mi educación</h2>
         <CardInfo
         link="#"
