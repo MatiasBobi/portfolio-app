@@ -1,13 +1,13 @@
 import Banner from "./Banner/Banner"
 import NavBar from "./NavBar/NavBar";
-import './Home.css'
-const Home = () =>{
+import './Homeheader.css'
+const Homeheader = () =>{
     return (
-        <div className="HomeContainer">
+        <header className="HomeContainer">
             <NavBar />
             <Banner />
-        </div>
+        </header>
     )
 }
 
-export default Home;
+export default Homeheader;

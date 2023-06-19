@@ -1,31 +1,25 @@
 
 import "./CardDisplayInfo.css";
 const CardDisplayInfo = (props) => {
-  const { icon, title, info, backStyle } = props;
 
+    const { icon, title, info, backStyle } = props;
   return (
-    <div className="cardInfo_container">
-      <div className="card_details">
-        <div className="face face1" style={{backgroundColor : backStyle}}>
-          <div className="card_content_container">
-            <div className="icon_2">
-                <img className="svgImage" src={icon} alt="" />
-            </div>
+    <div>
+      <div class="cardKnowledge_container" style={{backgroundColor:backStyle}}>
+        <div class="cardKnowledge_header">
+          <div class="cardKnowledge_img-box">
+            <img src={icon} alt="" />
           </div>
+          <h1 class="cardKnowledge_title">{title}</h1>
         </div>
-        <div class="face face2">
-          <div class="card_content_container">
-            <h3>
-              {title}
-            </h3>
-            <ul>
-              {info.map((item, index) => {
-                return <li key={index}>{item}</li>;
-              })}
-            </ul>
-          </div>
+
+        <div class="cardKnowledge_content">
+        <ul>
+          {info.map((information, index) =>{
+            return <li key={index}>{information}</li>
+          })}
+        </ul>
         </div>
-        <div className="face2"></div>
       </div>
     </div>
   );

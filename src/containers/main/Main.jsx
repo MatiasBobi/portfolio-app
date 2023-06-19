@@ -15,6 +15,7 @@ const Main = () =>{
             <Education />
             <Knowledge />
             <MyApps />
+            
             <FormContact />
         </main>
     )

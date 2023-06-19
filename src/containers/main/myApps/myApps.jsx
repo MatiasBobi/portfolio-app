@@ -47,7 +47,7 @@ const {ref: myRef, inView: myElementIsVisible} = useInView()
             img={numen}
             imgAlt="Api REST sobre equipos de futbol"
             title="Proyecto backend"
-            text="Api REST basada sobre jugadores de futbol. Desarollada como proyecot para backend utilizando NodeJs, Express y MongoDB"
+            text="Api REST basada sobre jugadores de futbol. Desarollada como proyecto para backend utilizando NodeJs, Express y MongoDB"
             linkApp="#"
             linkRepo="#"
           />

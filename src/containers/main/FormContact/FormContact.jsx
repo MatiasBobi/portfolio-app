@@ -15,6 +15,8 @@ const FormContact = () => {
   const [mailSentReq, setMailSentReq] = useState(false)
   const [isErrorMail, setIsErrorMail] = useState(false)
   const [mailSentMsg, setMailSentMsg] = useState('')
+
+  
   const handlerSubmit = async (e) =>{
     e.preventDefault()
 
@@ -61,7 +63,7 @@ const FormContact = () => {
 
 
   return (
-    <section>
+    <section id="contact">
       <div ref={myRef} className={`contact_container elementVisibility${myElementIsVisible ? '_visible' : '_hidden'}`}>
         <h2>Contacto</h2>
         <form onSubmit={handlerSubmit} className="formContact_container">

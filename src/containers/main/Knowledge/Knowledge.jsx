@@ -6,13 +6,20 @@ import nodejsLogo from "../../../assets/img/nodejslogo.svg";
 import mongodbLogo from "../../../assets/img/mongodblogo.svg";
 import css3Logo from "../../../assets/img/css3logo.svg";
 import rLogo from "../../../assets/img/reacticon.png";
+import { useInView } from "react-intersection-observer";
+
+
+
 
 const Knowledge = () => {
+
+  const {ref: myRef, inView: myElementIsVisible} = useInView()
+
   return (
-    <section className="Knowledge_container">
+    <section ref={myRef} id="Knowledge" className={`Knowledge_container elementVisibility${myElementIsVisible ? '_visible' : '_hidden'}`}>
       <h2>Mis conocimientos</h2>
+      <h3 className="titleKnowledge_container">Front-end</h3>
       <div className="frontEnd_container">
-        <h3>Front-end</h3>
         <CardDisplayInfo
           icon={html5logo}
           backStyle={"#ff7300"}
@@ -24,7 +31,7 @@ const Knowledge = () => {
           icon={css3Logo}
           backStyle={"#2750b8"}
           title="CSS3"
-          info={["CSS Grid & Flex", "Boostrap & Tailwind", "CSS Modules"]}
+          info={["CSS Grid & Flex", "Boostrap & Tailwind", "CSS Modules & SASS"]}
         />
 
         <CardDisplayInfo
@@ -35,8 +42,8 @@ const Knowledge = () => {
         />
       </div>
 
+      <h3 className="titleKnowledge_container">Back-end</h3>
       <div className="backEnd_container">
-      <h3>Back-end</h3>
         <CardDisplayInfo
           icon={nodejsLogo}
           backStyle={"#54ca62"}
@@ -46,7 +53,7 @@ const Knowledge = () => {
 
         <CardDisplayInfo
           icon={expressSvg}
-          backStyle={"#f3e2cf"}
+          backStyle={"#e41414"}
           title="Express"
           info={["Router", "Express Validator", "Session & Cookies"]}
         />

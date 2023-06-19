@@ -47,7 +47,22 @@
     height: 300px;
 }
 
-
+.educationTitle_container{
+    text-align: center;
+    margin-top: 30px;
+}
+@media (min-width: 1024px){
+    .education__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row nowrap;
+    }
+    .educationTitle_container{
+        text-align: center;
+        margin-top: 30px;
+    }
+}
 
 
 
