@@ -1,0 +1,14 @@
+.myApps_container{
+    height: 500px;    
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+}
+.swiperApps{
+    height: 100%;
+    width: 100%;
+}

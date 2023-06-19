@@ -1,0 +1,18 @@
+.ErrorMsg_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px 0px;
+}
+
+.ErrorIconPage{
+font-size: 10rem;
+    color: red;
+}
+.errorMsgStyle{
+    text-align: center;
+    font-size: 2rem;
+}

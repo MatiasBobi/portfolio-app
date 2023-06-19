@@ -1,0 +1,68 @@
+
+.education__container{
+    margin-top: 100px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.education__container img{
+    
+        width: 150px;
+        height: 150px;
+    
+}
+
+
+.institutions__container{
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 50px 0px;
+    align-items: center;
+    width: 100%;
+}
+
+.unt_container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    width: 70%;
+    height: 300px;
+    gap: 20px;
+}
+
+.numen_container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #000;
+    border-radius: 3px;
+    width: 70%;
+    height: 300px;
+}
+
+.educationTitle_container{
+    text-align: center;
+    margin-top: 30px;
+}
+@media (min-width: 1024px){
+    .education__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row nowrap;
+    }
+    .educationTitle_container{
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+
+

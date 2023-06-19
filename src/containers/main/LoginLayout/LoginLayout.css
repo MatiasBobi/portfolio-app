@@ -1,0 +1,206 @@
+.loginLayout_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.loginForm_container{
+    background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+     margin-top: 40px;
+    position: relative;
+	overflow: hidden;
+	width: 80%;
+	max-width: 100%;
+	min-height: 600px;
+}
+
+
+.singUp_container_show{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(41, 38, 38);
+    height: 100%;
+    transition: all 1s;
+    color: #fff;
+    & a {
+        color: rgb(19, 224, 71);
+        text-decoration: none;
+      }
+}
+.singUp_container_hidden{
+    height: 0%;
+    overflow: hidden;
+}
+
+
+
+.singIn_container{
+    position: absolute;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.singIn_hidden{
+    display: none;
+}
+.singIn_show{
+    display: none;
+}
+
+
+.loginTitle{
+    text-align: center;
+}
+
+.formLogin_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    height: 200px;
+}
+.inputLoginForm_container{
+    display: flex;
+    justify-content: center;
+    width: 100% !important;
+    margin: 20px 0px;
+}
+
+.formLogin_container input {
+    width: 80% !important;
+}
+
+.sessionIcons_container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 80%;
+    gap: 10px 0px;
+}
+.iconsLogin{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.overlayLogin_container{
+    display: none;
+    overflow: hidden;
+}
+.overlayLogin{
+    display: none;
+}
+.moveOverlayButton{
+    color: rgb(224, 71, 33);
+}
+@media (min-width: 1024px){
+
+
+    .loginLayout_container{
+        display: flex;
+        flex-direction: row !important;
+        margin: 50px 0px;
+    }
+    .loginForm_container{
+        width: 95%;
+    }
+
+    .singIn_container{
+        left: 50%;
+        width: 50%;
+    }
+    .singUpDesktop{
+        width: 50%;
+        height: 600px;
+        align-items: center;
+        justify-content: space-evenly;
+        display: flex;
+        flex-flow: column nowrap;
+        border-radius: 2%;
+    }
+    .buttonRegister {
+        margin-top: 10px;
+    }
+    .changeFormLogin{
+        display: none;
+    }
+    .overlayLogin{
+        display: flex;
+        position: absolute;
+        top: 0%;
+        background-color: rgb(33, 36, 33);
+        color: white;
+        width: 50%;
+        height: 100%;
+        z-index: 20;
+        border-radius: 2%;
+    }
+
+    .overlayLogin_container{
+        position: absolute;
+        display: flex;
+        transition: transform 0.6s ease-in-out;
+    }
+    
+    .overlayDesktop_left{
+        left: 0%;
+        transition: 0.8s all;
+        position: absolute;
+    }
+    .overlayDesktop_right{
+        left: 50%;
+        transition: 0.8s all;
+        position: absolute;
+    }
+    .newUser_hidden{
+        display: none;
+    }
+    .newUser{
+        display: flex;
+        width: 100%;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .loginUser{
+        display: flex;
+        width: 100%;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .newUser h2, .loginUser h2{
+        font-size: 2.5rem;
+    }
+    .newUser p, .loginUser p{
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        width: 90%;
+    }
+    .newUser button, .loginUser button{
+        width: 90%;
+        height: 50px;
+        background-color: rgb(231, 61, 61);
+        color: #fff;
+        border-radius: 10px;
+        font-size: 1.3rem;
+    }
+    .loginUser_hidden{
+        display: none;
+    }
+}
