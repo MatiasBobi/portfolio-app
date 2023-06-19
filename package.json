@@ -1,6 +1,6 @@
 {
   "homepage": "https://MatiasBobi.github.io/portfolio-app",
-  "name": "",
+  "name": "portfolio-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
