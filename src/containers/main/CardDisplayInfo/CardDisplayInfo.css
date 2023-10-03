@@ -53,7 +53,22 @@
   .cardKnowledge_container:hover .card .cardKnowledge_header .cardKnowledge_title {
     padding: 0;
   }
-  
+
+  .cardKnowledge_content > ul > li{
+    list-style: none;
+    font-size: 1.2em;
+    color: rgb(28, 35, 39);
+  }
+  .cardKnowledge_content > ul{
+    width: 100%;
+    padding: 0;
+  }
+  .cardKnowledge_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .cardKnowledge_container .content {
     display: flex;
     justify-content: center;

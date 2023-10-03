@@ -5,6 +5,9 @@
     align-items: center;
     margin-top: 50px;
 }
+.Knowledge_container > li{
+    list-style: none;
+}
 .frontEnd_container , .backEnd_container{
     display: flex;
     justify-content: center;

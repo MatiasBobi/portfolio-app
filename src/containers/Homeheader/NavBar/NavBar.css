@@ -2,8 +2,7 @@ nav{
     position: fixed;
     z-index: 40;
     width: 100%;
-    background: rgb(14,230,146);
-    background: linear-gradient(180deg, rgba(14,230,146,1) 0%, rgba(17,219,174,1) 100%);
+    background: #344f6a;
 }
 .NavBarMobile{
     display: flex;
@@ -25,7 +24,8 @@ nav{
 
 width: 30px;
 height: 3px;
-background-color: #000;
+background-color: #ffffff;
+
 border-radius: 5px;
 transition: all 0.4s ease-in-out;
 }
@@ -35,7 +35,7 @@ transition: all 0.4s ease-in-out;
     position: absolute;
     width: 30px;
     height: 3px;
-    background: #000;
+    background-color: #ffffff;
     border-radius: 5px;
     transition: all 0.4s ease-in-out;
 }
@@ -88,6 +88,9 @@ transition: all 0.4s ease-in-out;
     
 
 }
+.navLinks > a{
+    text-decoration: none;
+}
 .navLinks li{
     width: 90% !important;
     margin: 0 auto;
@@ -106,7 +109,8 @@ transition: all 0.4s ease-in-out;
 .session__container{
     display: flex;
     flex-flow: column nowrap;
-    height: 30%;
+    height: 18%;
+
 
     align-items: flex-end;
     justify-content: center;
@@ -125,6 +129,8 @@ transition: all 0.4s ease-in-out;
 }
 .textlogin{
     color: #252323;
+    width: 90%;
+    text-align: center;
 }
 .textlogin:hover{
     color: rgb(255, 133, 33);
@@ -141,6 +147,41 @@ transition: all 0.4s ease-in-out;
     gap: 0px 40px;
 }
 
+.dropdownSession_container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.dropdown_user{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.dropdown_toggle_session{
+
+    width: 100%;
+}
+.dropdownMenu_session{
+    width: 100%;
+    background-color: rgb(39, 39, 39) !important;
+}
+.dropdownMenu_session > a{
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.logOut_button{
+    color: rgb(235, 53, 53) !important;
+}
+.button_flags{
+    background-color: transparent;
+    border: 0px;
+}
+
 @media (min-width: 1024px){
 
     .btn_hamburger{
@@ -154,10 +195,22 @@ transition: all 0.4s ease-in-out;
         left: 0;
         top: 0;
         height: 60px;
-        background: linear-gradient(180deg, rgba(14,230,146,1) 0%, rgba(17,219,174,1) 100%);
+        background: #344f6a;
     }
     .btn_container{
         height: 0px;
+    }
+    .dropdownSession_container{
+        width: 50%;
+    }
+    .dropdownMenu_session > a{
+        color: white;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    .textlogin{
+        color: white;
+        text-decoration: none;
     }
     .navLinks{
         display: flex;
@@ -167,6 +220,7 @@ transition: all 0.4s ease-in-out;
         margin: 0;
         height: 60px;
         width: 50%;
+        text-decoration: none;
     }
 
     .navLinks li{
@@ -176,7 +230,9 @@ transition: all 0.4s ease-in-out;
         min-height: 50px;
         list-style: none;
         display: flex;
+        color: white;
         justify-content: center;
+        text-decoration: none;
     }
 
     .session__container{
@@ -193,8 +249,9 @@ transition: all 0.4s ease-in-out;
         min-height: 50px;
         width: 40%;
         margin: 2px;
+        
     }
-
+    
     .lang_flags_container{
         display: flex;
         flex-flow: row nowrap;

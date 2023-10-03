@@ -1,0 +1,197 @@
+{
+  "header": {
+    "navbar": {
+      "logOut_msg_success": "You have successfully logged out",
+      "logOut_button": "Log out",
+      "myProfile": "My profile",
+      "myUser": "My user:",
+      "alt_msg_changeLang_es": "Change language to Spanish",
+      "alt_msg_changeLang_en": "Change language to English",
+      "link_logIn_msg": "Log in",
+      "links": {
+        "link1_text": "Home",
+        "link2_text": "Who am I?",
+        "link3_text": "Knowledge",
+        "link4_text": "Contact me"
+      }
+    }
+  },
+
+  "main": {
+    "banner": {
+      "title": "Hello, my name is Matias.",
+      "myProfession": "Fullstack Developer Web",
+      "description_text": "I'm 23 years old and I'm looking to offer my knowledge for my first work experience.",
+      "github_alt": "Image with a link to my github profile",
+      "linkedin_alt": "Image with a link to my linkedn profile"
+      
+    },
+    "cardApps": {
+      "runApp": "Run App",
+      "repository": "Repository"
+    },
+    "education": {
+      "title": "My education",
+      "card1": {
+        "title": "National University of Tucumán",
+        "text": "University programmer with a background in mathematical analysis and algebra, with knowledge of languages such as HTML, CSS and JS.",
+        "link": "Read more"
+      },
+      "card2": {
+        "title": "Numen Academy",
+        "text": "Diploma in FullStack Web Development MERN",
+        "link": "Certificate"
+      }
+    },
+    "formContact": {
+      "form_title": "Contact",
+      "contact_placeholder": "Contact",
+      "subject_placeholder": "Subject",
+      "textarea_placeholder": "Write your text here!",
+      "error_send_mail_msg": "There was an error while trying to send the mail",
+      "error_msg": "Error trying to connect to the server",
+      "error_server_off": "Error: server is not responding",
+      "success_msg": "The mail was successfully sent",
+      "button_text": "Send mail",
+      "wp_placeholder" : "Type your message here!",
+      "button_wp_text" : "Send WhatsApp"
+    },
+    "knowledge": {
+      "title": "My knowledge",
+      "frontend": {
+        "card1": {
+          "title": "HTML5",
+          "info": {
+            "text1": "Semantic tags",
+            "text2": "Containers",
+            "text3": "Meta-tags"
+          }
+        },
+        "card2": {
+          "title": "CSS3",
+          "info": {
+            "text1": "CSS Grid & Flex",
+            "text2": "Boostrap & Tailwind",
+            "text3": "CSS Modules"
+          }
+        },
+        "card3": {
+          "title": "React",
+          "info": {
+            "text1": "State management",
+            "text2": "Containers",
+            "text3": "JSX"
+          }
+        }
+      },
+      "backend": {
+        "card1": {
+          "title": "NodeJs",
+          "info": {
+            "text1": "Cookies",
+            "text2": "Authentication and Authorization",
+            "text3": "JWT"
+          }
+        },
+        "card2": {
+          "title": "Express",
+          "info": {
+            "text1": "Router",
+            "text2": "Express Validator",
+            "text3": "Middlewares"
+          }
+        },
+        "card3": {
+          "title": "MongoDB",
+          "info": {
+            "text1": "Mongoose",
+            "text2": "CRUD",
+            "text3": "Schemes"
+          }
+        }
+      }
+    },
+    "loginLayout": {
+      "registerFetch": {
+        "statusMsg": {
+          "verify": "Data dont match.",
+          "dontMatchPass": "Passwords do not match.",
+          "errorRegister": "Error trying to register.",
+          "userexist": "The user already exists."
+        }
+      },
+      "loginFetch": {
+        "statusMsg": {
+          "successLogin": "Successful logging",
+          "loginError": "ERROR: There was a problem trying to log in.",
+          "dontMatchData": "ERROR: The information entered is not correct."
+        }
+      },
+      "serverOFF": "ERROR: The server is not responding.",
+      "formLogin": {
+        "title": "Login",
+        "email_placeholder": "Enter your email",
+        "password_placeholder": "Password",
+        "button_text": "Login",
+        "changeModal_text": "Not registered yet?, register ",
+        "changeModal_button_text": "here"
+      },
+      "formRegister": {
+        "title": "Register",
+        "user_label": "User",
+        "user_placeholder": "enter a user",
+        "user_guide_text": "You must enter a user name that is between 4-24 characters long, it cannot contain symbols.",
+        "email_label": "Email",
+        "email_placeholder": "Enter your email",
+        "email_guide_text": "The email entered is not correct.",
+        "password_label": "Password",
+        "password_placeholder": "Enter password",
+        "password_guide_text": "The password must contain between 8-24 characters, have at least one number and contain one of the following symbols ( ! @ # $ % ).",
+        "repeatPassword_label": "Repeat password",
+        "repeatPassword_placeholder": "Re-enter password",
+        "repeatPassword_guide_text": "Passwords do not match.",
+        "button_submit_text": "Register",
+        "changeModal_text": "Back to login ",
+        "changeModal_button_text": "here"
+      },
+      "modalDesktop": {
+        "login": {
+          "title": "What's new?",
+          "text": "Already registered on my site?, click on the button below to log in.",
+          "button_text": "Login"
+        },
+        "register": {
+          "title": "Welcome",
+          "text": "New to this site?, register by clicking on the button below",
+          "button_text": "Register"
+        }
+      }
+    },
+    "myApps": {
+      "title": "My apps",
+      "card1": {
+        "imgAlt": "Demo page about a clothing store",
+        "title": "E-commerce",
+        "text": "Web application worked on in a study group during our apprenticeship."
+      },
+      "card2": {
+        "imgAlt": "REST Api on soccer teams",
+        "title": "Backend project",
+        "text": "REST Api based on soccer players. Developed as a backend project using NodeJs, Express and MongoDB."
+      }
+    },
+    "myInfo": {
+      "title": "Who am I?",
+      "myDescription": "I am a person who is committed to constant study and eager to learn new tools, someone who can complement, observe, learn, listen and communicate easily with a work group.",
+      "button_cv_download": "Download my CV "
+    }
+  },
+  "footer": {
+    "rightText": "Website developed by @Matias Leonardo Bobi",
+    "github_alt": "Image with a link to my github profile",
+    "linkedin_alt": "Image with a link to my linkedn profile"
+  },
+  "errorPage": {
+    "text": "The page you are trying to enter does not exist or is not available."
+  }
+}

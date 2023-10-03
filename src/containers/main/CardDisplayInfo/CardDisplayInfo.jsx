@@ -1,5 +1,6 @@
 
 import "./CardDisplayInfo.css";
+
 const CardDisplayInfo = (props) => {
 
     const { icon, title, info, backStyle } = props;

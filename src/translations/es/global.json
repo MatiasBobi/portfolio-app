@@ -1,0 +1,196 @@
+{
+  "header": {
+    "navbar": {
+      "logOut_msg_success": "Cerraste sesión exitosamente",
+      "logOut_button": "Cerrar sesión",
+      "myProfile": "Mi perfil",
+      "myUser": "Mi usuario:",
+      "alt_msg_changeLang_es": "Cambiar de idioma a español",
+      "alt_msg_changeLang_en": "Cambiar de idioma a ingles",
+      "link_logIn_msg": "Iniciar sesión",
+      "links": {
+        "link1_text": "Inicio",
+        "link2_text": "¿Quien soy?",
+        "link3_text": "Conocimientos",
+        "link4_text": "Contacto"
+      }
+    }
+  },
+
+  "main": {
+    "banner": {
+      "title": "Hola, me llamo Matias.",
+      "myProfession": "Fullstack Developer Web",
+      "description_text": "Tengo 23 años y estoy en busqueda de ofrecer mis conocimientos para mi primera experiencia laboral.",
+      "github_alt": "Image with a link to my github profile",
+      "linkedin_alt": "Image with a link to my linkedn profile"
+    },
+    "cardApps": {
+      "runApp": "Probar App",
+      "repository": "Repositorio"
+    },
+    "education": {
+      "title": "Mi educacion",
+      "card1": {
+        "title": "Universidad Nacional de Tucumán",
+        "text": "Programador universitario con bases de Analisis matematico y algebra, con conocimientos en lenguajes como HTML, CSS y JS",
+        "link": "Leer más"
+      },
+      "card2": {
+        "title": "Academia Numen",
+        "text": "Diplomatura en Desarrollo Web FullStack MERN",
+        "link": "Certificado"
+      }
+    },
+    "formContact": {
+      "form_title": "Contacto",
+      "contact_placeholder": "contacto",
+      "subject_placeholder": "Tema",
+      "textarea_placeholder": "Escribí tu texto aquí!",
+      "error_send_mail_msg": "Hubo un error al intentar enviar el mail",
+      "error_msg": "Error al intentar conectar con el servidor",
+      "error_server_off": "Error: el servidor no responde",
+      "success_msg": "El mail fue enviado exitosamente",
+      "button_text": "Enviar mail",
+      "wp_placeholder" : "Escribí su mensaje aqui!",
+      "button_wp_text" : "Enviar WhatsApp"
+    },
+    "knowledge": {
+      "title": "Mis conocimientos",
+      "frontend": {
+        "card1": {
+          "title": "HTML5",
+          "info": {
+            "text1": "Etiquetas semanticas",
+            "text2": "Contenedores",
+            "text3": "Meta tags"
+          }
+        },
+        "card2": {
+          "title": "CSS3",
+          "info": {
+            "text1": "CSS Grid & Flex",
+            "text2": "Boostrap & Tailwind",
+            "text3": "CSS Modules"
+          }
+        },
+        "card3": {
+          "title": "React",
+          "info": {
+            "text1": "Manejo de estados",
+            "text2": "Contenedores",
+            "text3": "JSX"
+          }
+        }
+      },
+      "backend": {
+        "card1": {
+          "title": "NodeJs",
+          "info": {
+            "text1": "Cookies",
+            "text2": "Autenticación y Autorización",
+            "text3": "JWT"
+          }
+        },
+        "card2": {
+          "title": "Express",
+          "info": {
+            "text1": "Router",
+            "text2": "Express Validator",
+            "text3": "Middlewares"
+          }
+        },
+        "card3": {
+          "title": "MongoDB",
+          "info": {
+            "text1": "Mongoose",
+            "text2": "CRUD",
+            "text3": "Esquemas"
+          }
+        }
+      }
+    },
+    "loginLayout": {
+      "registerFetch": {
+        "statusMsg": {
+          "verify": "Los datos no coinciden.",
+          "dontMatchPass": "Las contraseñas no coinciden.",
+          "errorRegister": "Error al intentar registrarse.",
+          "userexist": "El usuario ya existe."
+        }
+      },
+      "loginFetch": {
+        "statusMsg": {
+          "successLogin": "Logueo exitoso",
+          "loginError": "ERROR: Hubo un problema la intentar iniciar sesión",
+          "dontMatchData": "ERROR: La informacion ingresada no es correcta."
+        }
+      },
+      "serverOFF": "El servidor no responde para realizar la consulta.",
+      "formLogin": {
+        "title": "Iniciar sesión",
+        "email_placeholder": "Ingresar email",
+        "password_placeholder": "Contraseña",
+        "button_text": "Iniciar sesión",
+        "changeModal_text": "¿No estás registrado?, regístrate ",
+        "changeModal_button_text": "aquí"
+      },
+      "formRegister": {
+        "title": "Registro",
+        "user_label": "Usuario",
+        "user_placeholder": "ingresar usuario",
+        "user_guide_text": "Debe ingresar un usuario que tenga entre 4-24 caracteres, no puede contener símbolos.",
+        "email_label": "Email",
+        "email_placeholder": "Ingresar email",
+        "email_guide_text": "El email ingresado no es correcto.",
+        "password_label": "Contraseña",
+        "password_placeholder": "Ingresar contraseña",
+        "password_guide_text": "La contraseña debe contener entre 8-24 caracteres, tener minimo un numero y contener alguno de los siguientes símbolos ( ! @ # $ % ).",
+        "repeatPassword_label": "Repetir contraseña",
+        "repeatPassword_placeholder": "Ingresar nuevamente la contraseña",
+        "repeatPassword_guide_text": "Las contraseñas no coinciden.",
+        "button_submit_text": "Registrarme",
+        "changeModal_text": "Volver al Inicio de sesión ",
+        "changeModal_button_text": "aquí"
+      },
+      "modalDesktop": {
+        "login": {
+          "title": "¿Que hay de nuevo?",
+          "text": "¿Ya estás registrado en mi sitio web?, presiona en el botón de abajo para iniciar sesión",
+          "button_text": "Iniciar sesión"
+        },
+        "register": {
+          "title": "Bienvenido",
+          "text": "¿Eres nuevo en este sitio?, regístrate haciendo click en el botón de abajo",
+          "button_text": "Registrarme"
+        }
+      }
+    },
+    "myApps": {
+      "title": "Mis apps",
+      "card1": {
+        "imgAlt": "Pagina de demo sobre una tienda de ropas",
+        "title": "E-commerce",
+        "text": "Aplicacion web trabajada en grupo de estudio durante nuestro aprendizaje."
+      },
+      "card2": {
+        "imgAlt": "Api REST sobre equipos de futbol",
+        "title": "Proyecto backend",
+        "text": "Api REST basada sobre jugadores de futbol. Desarollada como proyecto para backend utilizando NodeJs, Express y MongoDB"
+      }
+    },
+    "myInfo": {
+      "title": "¿Quien soy?",
+      "myDescription": "Soy una persona que esta comprometida con el constante estudio y con muchas ganas de aprender nuevas herramientas, alguien que puede complementarse, observar, aprender, escuchar y comunicarme facilmente con un grupo de trabajo.",
+      "button_cv_download": "Descargar mi CV "
+    }
+  },
+  "footer": {
+    "rightText": "Pagina desarollada por @Matias Leonardo Bobi",
+    "github_alt": "Imagen con un link a mi perfil de github",
+    "linkedin_alt": "Imagen con un link a mi perfil de linkedn"
+  },
+  "errorPage": {
+    "text": "La pagina que solicito no esta disponible o no existe."
+  }
+}

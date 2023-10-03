@@ -5,17 +5,29 @@
     align-items: center;
     flex-flow: nowrap column;
     position: relative;
-}
 
+    width: 90%;
+    margin: 0 auto;
+}
+.titleFormContact_container {
+    font-size: 3em;
+}
 .formContact_container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
     gap: 20px 0px;
-
     width: 100%;
-    height: 500px;
+    min-height: 300px;
+}
+.wpForm_container{
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%;
 }
 
 .mailMessage_container_show{
@@ -93,6 +105,44 @@
     background:#CC4949; 
 }
 
-.prueba{
+.mailForm_container{
+    width: 100%;
+    height: 450px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 0px;
+}
+
+.mailForm_container input[type=submit]{
+    width: 80%;
+}
+
+.whatsappSend_button{
+    margin-top: 30px;
+    background-color: rgb(41, 248, 33);
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    border-radius:5px;
+    border:0;
+    font-weight:700;
+    font-size:24px;
+}
+.mailForm_container input{
+    border-radius: 3%;
+}
+.contactform_container{
+    position: relative;
+}
+.button_changeType_contact{
     position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.button_changeType_contact img{
+    width: 64px;
+    height: 64px;
 }
