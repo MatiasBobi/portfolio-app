@@ -1,4 +1,4 @@
-import CardDisplayInfo from "../CardDisplayInfo/CardDisplayInfo";
+import CardDisplayInfo from "./CardDisplayInfo/CardDisplayInfo";
 import "./Knowledge.css";
 
 // Icons
