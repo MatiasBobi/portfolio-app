@@ -1,6 +1,6 @@
 import { apiSlice } from "./apiSlice";
 
-const USERS_URL = 'http://localhost:80/auth'
+const USERS_URL = 'https://server-portfolio-8wal.onrender.com/auth'
 
 export const usersApiSlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
