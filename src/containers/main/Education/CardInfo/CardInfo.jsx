@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import "./CardInfo.css";
 
 const CardInfo = (props) => {
   const { text, title, academy, link, textLink } = props;
   return (
-    <div>
+
       <div className="inst__container">
         <div className="institution_box">
           <div className="academy__container">
@@ -12,11 +13,10 @@ const CardInfo = (props) => {
             </div>
             <h3>{title}</h3>
             <p>{text}</p>
-            <a href={link}>{textLink}</a>
+            <Link target="_blank" to={link}>{textLink}</Link>
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

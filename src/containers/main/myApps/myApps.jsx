@@ -1,18 +1,24 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
+import { useChangeLang } from "../../../hooks/useChangeLang";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./myApps.css";
 
-//CONTAINERS
+// Containers
 import CardApps from "../CardApps/CardApps";
+//
 
-// IMAGES
+// Images
 import jober from "../../../assets/img/jober.png";
 import numen from "../../../assets/img/numen.png"
+//
+
+// Function to see if the element is visible or not
 import { useInView } from "react-intersection-observer";
+//
 
 const MyApps = () => {
 
@@ -20,7 +26,7 @@ const {ref: myRef, inView: myElementIsVisible} = useInView()
 
   return (
     <div ref={myRef} className={`myApps_container elementVisibility${myElementIsVisible ? '_visible' : '_hidden'}`}>
-      <h2>My Apps</h2>
+      <h2>{useChangeLang("main.myApps.title")}</h2>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -35,31 +41,20 @@ const {ref: myRef, inView: myElementIsVisible} = useInView()
         <SwiperSlide>
           <CardApps
             img={jober}
-            imgAlt="Pagina de demo sobre una tienda de ropas"
-            title="E-commerce"
-            text="Aplicacion web trabajada en grupo de estudio durante nuestro aprendizaje."
-            linkApp="#"
-            linkRepo="#"
+            imgAlt={useChangeLang("main.myApps.card1.imgAlt")}
+            title={useChangeLang("main.myApps.card1.title")}
+            text={useChangeLang("main.myApps.card1.text")}
+            linkApp="https://proyecto-react-numen.vercel.app"
+            linkRepo="https://github.com/NCapdevila/proyectoReactNumen"
           />
         </SwiperSlide>
         <SwiperSlide>
           <CardApps
             img={numen}
-            imgAlt="Api REST sobre equipos de futbol"
-            title="Proyecto backend"
-            text="Api REST basada sobre jugadores de futbol. Desarollada como proyecto para backend utilizando NodeJs, Express y MongoDB"
-            linkApp="#"
-            linkRepo="#"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardApps
-            img={jober}
-            imgAlt="Pagina sobre manejo de consultas a APIs externas"
-            title="APIs"
-            text="Pagina sobre consulta a APIs"
-            linkApp="#"
-            linkRepo="#"
+            imgAlt={useChangeLang("main.myApps.card2.imgAlt")}
+            title={useChangeLang("main.myApps.card2.title")}
+            text={useChangeLang("main.myApps.card2.text")}
+            linkRepo="https://github.com/MatiasBobi/Proyecto-Backend"
           />
         </SwiperSlide>
       </Swiper>

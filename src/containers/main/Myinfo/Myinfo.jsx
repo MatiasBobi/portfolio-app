@@ -1,8 +1,22 @@
 import "./Myinfo.css";
+import { useState } from "react";
+
+// Icons
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+
+//
+
+
+// Function to see if the element is visible or not
 import { useInView } from "react-intersection-observer";
+//
+
+// Functions of language change
+import { useChangeLang } from "../../../hooks/useChangeLang";
+import { Link } from "react-router-dom";
+//
+
 const Myinfo = () => {
   const { ref: myRef, inView: myElementIsVisible } = useInView();
 
@@ -11,38 +25,33 @@ const Myinfo = () => {
     setIconDownload(!iconDownload);
   };
   return (
-    <section
-      ref={myRef}
-      className={`myinfo__container elementVisibility${
-        myElementIsVisible ? "_visible" : "_hidden"
-      }`}
-      id="myInfo"
-    >
-      <h2 className="title_container item">¿Quien soy?</h2>
-      <div className="mydescription__container item">
-        <p className="textMyInfo_container">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
-          ducimus neque exercitationem rerum veniam debitis dolor. Repellat
-          culpa magni rem beatae, blanditiis sed atque perferendis repellendus
-          voluptatem, iste sunt qui! Ad consectetur deserunt debitis, mollitia
-          tenetur dicta voluptatibus delectus voluptates quod explicabo odit
-          suscipit dolore quae! Laboriosam voluptatee sit dolor.
-        </p>
-      </div>
-      <div className="buttonCV_container item">
-        <button
-          className={`buttonCV_link hover`}
-          onMouseEnter={handlerIcon}
-          onMouseLeave={handlerIcon}
-        >
-          Descargar mi CV
-          <FontAwesomeIcon
-            className={`icondownload ${
-              iconDownload ? "hoverIcon_on" : "hoverIcon_off"
-            }`}
-            icon={faDownload}
-          />
-        </button>
+    <section ref={myRef} className={`myinfo__container`} id="myInfo">
+      <div className="whoiam_container">
+        <h2 className="title_container item">
+          {useChangeLang("main.myInfo.title")}
+        </h2>
+        <div className="mydescription__container item">
+          <p className="textMyInfo_container">
+            {useChangeLang("main.myInfo.myDescription")}
+          </p>
+        </div>
+        <div className="buttonCV_container item">
+          <Link to="https://drive.google.com/uc?export=download&id=1hKAj9NJ_pZONYJyr-Z5T82FEIViRqrf7">
+            <button
+              className={`buttonCV_link hover`}
+              onMouseEnter={handlerIcon}
+              onMouseLeave={handlerIcon}
+            >
+              {useChangeLang("main.myInfo.button_cv_download")}
+              <FontAwesomeIcon
+                className={`icondownload ${
+                  iconDownload ? "hoverIcon_on" : "hoverIcon_off"
+                }`}
+                icon={faDownload}
+              />
+            </button>
+          </Link>
+        </div>
       </div>
     </section>
   );
