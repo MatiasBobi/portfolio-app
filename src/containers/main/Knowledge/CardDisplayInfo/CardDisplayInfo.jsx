@@ -10,7 +10,7 @@ const CardDisplayInfo = (props) => {
         <div className="cardKnowledge_header">
           <div className="cardKnowledge_img-box">
             <img src={icon} alt="" />
-          </div>sk
+          </div>
           <h1 className="cardKnowledge_title">{title}</h1>
         </div>
 
