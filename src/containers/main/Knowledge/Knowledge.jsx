@@ -50,10 +50,10 @@ const Knowledge = () => {
         <CardDisplayInfo
           icon={rLogo}
           backStyle={"#109acf"}
-          title={useChangeLang("main.knowledge.frontend.card2.title")}
-          info={[useChangeLang("main.knowledge.frontend.card2.info.text1"),
-          useChangeLang("main.knowledge.frontend.card2.info.text2"),
-          useChangeLang("main.knowledge.frontend.card2.info.text3")]}
+          title={useChangeLang("main.knowledge.frontend.card3.title")}
+          info={[useChangeLang("main.knowledge.frontend.card3.info.text1"),
+          useChangeLang("main.knowledge.frontend.card3.info.text2"),
+          useChangeLang("main.knowledge.frontend.card3.info.text3")]}
         />
       </div>
 
