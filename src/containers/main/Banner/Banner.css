@@ -28,10 +28,10 @@
 .text_banner_descrption{
     width: 90%;
     text-align: center;
-    font-size: 3vh;
+    font-size: 2.2vw;
 }
 .profession_text{
-    font-size: 3vh;
+    font-size: 5vw;
 }
 
 .img_banner_container{
@@ -70,12 +70,6 @@
 @media (min-width: 550px){
     .img_banner_container img{
         width: 30vw;
-    }
-    .profession_text{
-        font-size: 4vw;
-    }
-    .text_banner_descrption{
-        font-size: 3vw;
     }
 }
 @media (min-width: 1024px){
