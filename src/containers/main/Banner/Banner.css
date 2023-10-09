@@ -5,8 +5,7 @@
     gap: 30px 0px;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
-    height: 100vh;
+    height: 700px;
     background: #708ec0;
     color: white;
 }
@@ -43,9 +42,7 @@
     align-items: center;
 }
 .img_banner_container img{
-    width: 300px;
-    height: 300px;
-    aspect-ratio: 16/9;
+    width: 60vw;
     border-radius: 50%;
 }
 .info__container{
@@ -69,11 +66,24 @@
 .desktop_title{
     display: none;
 }
+
+@media (min-width: 550px){
+    .img_banner_container img{
+        width: 30vw;
+    }
+    .profession_text{
+        font-size: 4vw;
+    }
+    .text_banner_descrption{
+        font-size: 3vw;
+    }
+}
 @media (min-width: 1024px){
     
     .banner__container{
         display: flex;
         flex-flow: row nowrap;
+        height: 100vh;
     }
     .mobile_title{
         display: none;
@@ -103,7 +113,12 @@
         grid-area: infoBanner;
     }
 
-
+    .profession_text{
+        font-size: 1.8vw;
+    }
+    .text_banner_descrption{
+        font-size: 1.3vw;
+    }
     .tracking-in-expand {
         -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
                 animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
