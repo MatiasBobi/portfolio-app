@@ -149,10 +149,11 @@ transition: all 0.4s ease-in-out;
 }
 
 .dropdownSession_container{
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
     align-items: center;
+
 }
 
 .dropdown_user{
@@ -201,7 +202,10 @@ transition: all 0.4s ease-in-out;
         height: 0px;
     }
     .dropdownSession_container{
-        width: 50%;
+        width: 70%;
+    }
+    .dropdownMenu_session{
+        width: 100%;
     }
     .dropdownMenu_session > a{
         color: white;

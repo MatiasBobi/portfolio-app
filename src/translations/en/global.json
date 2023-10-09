@@ -79,7 +79,7 @@
           "title": "React",
           "info": {
             "text1": "State management",
-            "text2": "Containers",
+            "text2": "Hooks",
             "text3": "JSX"
           }
         }
