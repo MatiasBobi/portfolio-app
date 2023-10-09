@@ -25,13 +25,13 @@ import { useChangeLang } from "../../../hooks/useChangeLang";
 const LoginLayout = () => {
 
 // Server response texts
-const verifyRegisterData = useChangeLang("main.LoginLayout.registerFetch.statusMsg.verify")
-const registerdontMatchpass = useChangeLang("main.LoginLayout.registerFetch.statusMsg.dontMatchpass")
-const registerError = useChangeLang("main.LoginLayout.registerFetch.statusMsg.errorRegister")
-const registerUserExists = useChangeLang("main.LoginLayout.registerFetch.statusMsg.userexist")
-const loginSuccess = useChangeLang("main.LoginLayout.loginFetch.statusMsg.successLogin")
-const loginError = useChangeLang("main.LoginLayout.loginFetch.statusMsg.loginError")
-const loginDontMatchData = useChangeLang("main.LoginLayout.loginFetch.statusMsg.dontMatchData")
+const verifyRegisterData = useChangeLang("main.loginLayout.registerFetch.statusMsg.verify")
+const registerdontMatchpass = useChangeLang("main.loginLayout.registerFetch.statusMsg.dontMatchpass")
+const registerError = useChangeLang("main.loginLayout.registerFetch.statusMsg.errorRegister")
+const registerUserExists = useChangeLang("main.loginLayout.registerFetch.statusMsg.userexist")
+const loginSuccess = useChangeLang("main.loginLayout.loginFetch.statusMsg.successLogin")
+const loginError = useChangeLang("main.loginLayout.loginFetch.statusMsg.loginError")
+const loginDontMatchData = useChangeLang("main.loginLayout.loginFetch.statusMsg.dontMatchData")
 const serverOFF = useChangeLang("main.loginLayout.serverOFF")
 //
 
