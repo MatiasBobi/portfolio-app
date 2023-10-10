@@ -19,7 +19,7 @@
 
   "main": {
     "banner": {
-      "title": "Hello, my name is Matias.",
+      "title": "Hello, my name is Matías.",
       "myProfession": "Fullstack Developer Web",
       "description_text": "I'm 23 years old and I'm looking to offer my knowledge for my first work experience.",
       "github_alt": "Image with a link to my github profile",
@@ -45,7 +45,7 @@
     },
     "formContact": {
       "form_title": "Contact",
-      "contact_placeholder": "Contact",
+      "contact_placeholder": "Your mail",
       "subject_placeholder": "Subject",
       "textarea_placeholder": "Write your text here!",
       "error_send_mail_msg": "There was an error while trying to send the mail",
@@ -187,7 +187,7 @@
     }
   },
   "footer": {
-    "rightText": "Website developed by @Matias Leonardo Bobi",
+    "rightText": "Website developed by @Matías Leonardo Bobi",
     "github_alt": "Image with a link to my github profile",
     "linkedin_alt": "Image with a link to my linkedn profile"
   },
