@@ -63,7 +63,7 @@ const FormContact = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:80/mail/sendmail", {
+      const res = await axios.post("https://server-portfolio-8wal.onrender.com/mail/sendmail", {
         subject: subject,
         from: from,
         description: description,

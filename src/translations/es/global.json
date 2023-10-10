@@ -10,7 +10,7 @@
       "link_logIn_msg": "Iniciar sesión",
       "links": {
         "link1_text": "Inicio",
-        "link2_text": "¿Quien soy?",
+        "link2_text": "¿Quién soy?",
         "link3_text": "Conocimientos",
         "link4_text": "Contacto"
       }
@@ -19,21 +19,21 @@
 
   "main": {
     "banner": {
-      "title": "Hola, me llamo Matias.",
+      "title": "Hola, me llamo Matías.",
       "myProfession": "Fullstack Developer Web",
-      "description_text": "Tengo 23 años y estoy en busqueda de ofrecer mis conocimientos para mi primera experiencia laboral.",
-      "github_alt": "Image with a link to my github profile",
-      "linkedin_alt": "Image with a link to my linkedn profile"
+      "description_text": "Tengo 23 años y estoy en búsqueda de ofrecer mis conocimientos para mi primera experiencia laboral.",
+      "github_alt": "Icono que representa el link a mi github",
+      "linkedin_alt": "Icono que representa el link a mi linkedin"
     },
     "cardApps": {
       "runApp": "Probar App",
       "repository": "Repositorio"
     },
     "education": {
-      "title": "Mi educacion",
+      "title": "Mi educación",
       "card1": {
         "title": "Universidad Nacional de Tucumán",
-        "text": "Programador universitario con bases de Analisis matematico y algebra, con conocimientos en lenguajes como HTML, CSS y JS",
+        "text": "Programador universitario con bases de Análisis matemático y algebra, con conocimientos en lenguajes como HTML, CSS y JS",
         "link": "Leer más"
       },
       "card2": {
@@ -44,7 +44,7 @@
     },
     "formContact": {
       "form_title": "Contacto",
-      "contact_placeholder": "contacto",
+      "contact_placeholder": "Tu correo",
       "subject_placeholder": "Tema",
       "textarea_placeholder": "Escribí tu texto aquí!",
       "error_send_mail_msg": "Hubo un error al intentar enviar el mail",
@@ -52,7 +52,7 @@
       "error_server_off": "Error: el servidor no responde",
       "success_msg": "El mail fue enviado exitosamente",
       "button_text": "Enviar mail",
-      "wp_placeholder" : "Escribí su mensaje aqui!",
+      "wp_placeholder" : "Escribí tu mensaje aquí!",
       "button_wp_text" : "Enviar WhatsApp"
     },
     "knowledge": {
@@ -61,7 +61,7 @@
         "card1": {
           "title": "HTML5",
           "info": {
-            "text1": "Etiquetas semanticas",
+            "text1": "Etiquetas semánticas",
             "text2": "Contenedores",
             "text3": "Meta tags"
           }
@@ -132,20 +132,20 @@
         "email_placeholder": "Ingresar email",
         "password_placeholder": "Contraseña",
         "button_text": "Iniciar sesión",
-        "changeModal_text": "¿No estás registrado?, regístrate ",
+        "changeModal_text": "¿No estás registrado? Regístrate ",
         "changeModal_button_text": "aquí"
       },
       "formRegister": {
         "title": "Registro",
         "user_label": "Usuario",
-        "user_placeholder": "ingresar usuario",
+        "user_placeholder": "Ingresar usuario",
         "user_guide_text": "Debe ingresar un usuario que tenga entre 4-24 caracteres, no puede contener símbolos.",
         "email_label": "Email",
         "email_placeholder": "Ingresar email",
         "email_guide_text": "El email ingresado no es correcto.",
         "password_label": "Contraseña",
         "password_placeholder": "Ingresar contraseña",
-        "password_guide_text": "La contraseña debe contener entre 8-24 caracteres, tener minimo un numero y contener alguno de los siguientes símbolos ( ! @ # $ % ).",
+        "password_guide_text": "La contraseña debe contener entre 8-24 caracteres, tener mínimo un número y contener alguno de los siguientes símbolos (! @ # $ %).",
         "repeatPassword_label": "Repetir contraseña",
         "repeatPassword_placeholder": "Ingresar nuevamente la contraseña",
         "repeatPassword_guide_text": "Las contraseñas no coinciden.",
@@ -169,9 +169,9 @@
     "myApps": {
       "title": "Mis apps",
       "card1": {
-        "imgAlt": "Pagina de demo sobre una tienda de ropas",
+        "imgAlt": "Página de demo sobre una tienda de ropas",
         "title": "E-commerce",
-        "text": "Aplicacion web trabajada en grupo de estudio durante nuestro aprendizaje."
+        "text": "Aplicación web trabajada en grupo de estudio durante nuestro aprendizaje."
       },
       "card2": {
         "imgAlt": "Api REST sobre equipos de futbol",
@@ -180,13 +180,13 @@
       }
     },
     "myInfo": {
-      "title": "¿Quien soy?",
-      "myDescription": "Soy una persona que esta comprometida con el constante estudio y con muchas ganas de aprender nuevas herramientas, alguien que puede complementarse, observar, aprender, escuchar y comunicarme facilmente con un grupo de trabajo.",
+      "title": "¿Quién soy?",
+      "myDescription": "Soy una persona que está comprometida con el constante estudio y con muchas ganas de aprender nuevas herramientas, alguien que puede complementarse, observar, aprender, escuchar y comunicarme fácilmente con un grupo de trabajo.",
       "button_cv_download": "Descargar mi CV "
     }
   },
   "footer": {
-    "rightText": "Pagina desarollada por @Matias Leonardo Bobi",
+    "rightText": "Pagina desarollada por @Matías Leonardo Bobi",
     "github_alt": "Imagen con un link a mi perfil de github",
     "linkedin_alt": "Imagen con un link a mi perfil de linkedn"
   },

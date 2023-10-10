@@ -64,19 +64,27 @@ transition: all 0.4s ease-in-out;
     height: 100%;
 }
 .navLink__container_open{
-    position: fixed;
     display: flex;
-    z-index: 10;
-    background-color: #fff;
-    flex-flow: column nowrap;
-    
-    top: 40px;
-    left: 0;
-    width: 100%;
-    overflow-y: auto;
-    height: 100vh;
-    transition: left 0.2s ease-in-out;
+    overflow-y: scroll;
+    flex-flow: column wrap;
+    background-color: #e2dada;
+    min-height: 100vh;
+    gap: 60px 0px;
 }
+
+/* position: fixed;
+display: flex;
+z-index: 10;
+background-color: #dd2323;
+flex-flow: column;
+justify-content: space-evenly;
+top: 40px;
+left: 0;
+width: 100%;
+min-height: 100vh;
+overflow-y: auto;
+overflow-x: auto;
+transition: left 0.2s ease-in-out; */
 .navLinks{
 
     width: 100%;
@@ -182,7 +190,14 @@ transition: all 0.4s ease-in-out;
     background-color: transparent;
     border: 0px;
 }
+/* @media only screen and (max-height: 768px) and (orientation: landscape){
+    .navLink__container_open{
+        background-color: green;
+        display: flex;
+        flex-flow: row nowrap;
 
+    }
+} */
 @media (min-width: 1024px){
 
     .btn_hamburger{
