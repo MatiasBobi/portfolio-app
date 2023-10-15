@@ -186,11 +186,11 @@
     }
   },
   "footer": {
-    "rightText": "Pagina desarollada por @Matías Leonardo Bobi",
+    "rightText": "Pagína desarollada por @Matías Leonardo Bobi",
     "github_alt": "Imagen con un link a mi perfil de github",
     "linkedin_alt": "Imagen con un link a mi perfil de linkedn"
   },
   "errorPage": {
-    "text": "La pagina que solicito no esta disponible o no existe."
+    "text": "La pagína que solicito no esta disponible o no existe."
   }
 }

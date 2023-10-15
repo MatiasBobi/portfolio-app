@@ -2,11 +2,9 @@
 
 
 const NavBarLink = (props) =>{
-    const {text, keyId} = props
+    const {text, linkto} = props
     return(
-        <li className='links' key={keyId}>{text}</li>
-        
-        
+        <a href={linkto} className='links'>{text}</a>
     )
 }
 

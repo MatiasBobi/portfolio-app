@@ -45,6 +45,11 @@ const NavBar = () => {
 
   //
 
+  // Flags desktop state
+  const [changeFlag, setChangeFlag] = useState("es")
+  const [flagModal, setFlagModal] = useState(false)
+  //
+
   // Function that handles the status of the overlay // 
   const [buttonMobile, setButtonMobile] = useState(true);
   const handleButtonMobile = () => {
@@ -52,8 +57,8 @@ const NavBar = () => {
   };
 
   // Language configuration //
-  const {i18n} = useTranslation("global")
-  const handlerLang = (lang) =>{
+  const { i18n } = useTranslation("global")
+  const handlerLang = (lang) => {
     i18n.changeLanguage(lang)
   }
   // Variables that change the language change //
@@ -65,7 +70,7 @@ const NavBar = () => {
   //
 
   // Function that handles unlogging //
-  const handleLogOut = () =>{
+  const handleLogOut = () => {
     dispatch(logOut())
     navigate("/")
     toast.success(logout_msg_success)
@@ -73,80 +78,101 @@ const NavBar = () => {
   ////////////////////////////////////
 
 
+  // <div className="btn_mobile" onClick={handleButtonMobile}>
+  // <div
+  //   className={`btn_hamburger ${
+  //     buttonMobile ? "btn_closed" : "btn_open"
+  //   }`}
+  //   onClick={handleButtonMobile}
+  // ></div>
+
   return (
-    
+
     <nav>
       <ToastContainer />
-      <div className="NavBarMobile">
-        <div className="btn_container">
-          <div className="btn_mobile" onClick={handleButtonMobile}>
-            <div
-              className={`btn_hamburger ${
-                buttonMobile ? "btn_closed" : "btn_open"
-              }`}
-            ></div>
+      <div className="btn_mobile" onClick={handleButtonMobile}>
+        <div
+          className={`btn_hamburger ${buttonMobile ? "btn_closed" : "btn_open"
+            }`}
+          onClick={handleButtonMobile}
+        ></div>
+      </div>
+      <div className={`drawer ${buttonMobile ? "closed" : "open"
+        }`}>
+        <div className="navLinks">
+          <ul>
+            <li key={1}>
+              <Link to={"/"} onClick={() => setButtonMobile(true)}>
+                {useChangeLang("header.navbar.links.link1_text")}
+              </Link>
+            </li>
+            <li key={2} onClick={() => setButtonMobile(true)}>
+              <a href="/#myInfo">{useChangeLang("header.navbar.links.link2_text")}</a>
+            </li>
+            <li key={3} onClick={() => setButtonMobile(true)}>
+              <a href="/#Knowledge">{useChangeLang("header.navbar.links.link3_text")}</a>
+            </li>
+            <li key={4} onClick={() => setButtonMobile(true)}>
+              <a href="/#contact">{useChangeLang("header.navbar.links.link4_text")}</a>
+            </li>
+
+
+          </ul>
+          <div className="desktopFlags_modal" onClick={() => setFlagModal(!flagModal)}>
+            <button className="button_modal_flag">
+              {changeFlag === "es" ?
+                <img src={spain_flag} alt={useChangeLang("header.navbar.alt_msg_changeLang_es")} />
+                :
+                <img src={uk_flag} alt={useChangeLang("header.navbar.alt_msg_changeLang_en")} />
+              }
+            </button>
           </div>
+        
+          <div className={`lang_flags_container ${flagModal ? "desktopFlags" : "desktopFlags_off"}`}>
+          <span class="top-bot top-bot-border"></span>
+            <div onClick={() => {
+              setButtonMobile(true)
+              setChangeFlag("es")
+              setFlagModal(false)
+            }}>
+              <button className="button_flags" onClick={() => handlerLang("es")}>
+                <img src={spain_flag} alt={useChangeLang("header.navbar.alt_msg_changeLang_es")} />
+              </button>
+            </div>
+            <div onClick={() => {
+              setButtonMobile(true)
+              setChangeFlag("en")
+              setFlagModal(false)
+            }}>
+              <button className="button_flags" onClick={() => handlerLang("en")}>
+                <img src={uk_flag} alt={useChangeLang("header.navbar.alt_msg_changeLang_en")} />
+              </button>
+            </div>
+          </div>
+          {userLoggedIn.userInfo === null ? (
+            <div className="textSession">
+              <Link onClick={() => setButtonMobile(true)} className="textLogin" to={"/login"}>
+                {login_msg}
+              </Link>
+            </div>
+          ) : (
+            <div className="dropdownSession_container">
+              <Dropdown className="dropdown_user">
+                <Dropdown.Toggle className="dropdown_toggle_session" id="dropdown-basic">
+                  {myProfile}
+                </Dropdown.Toggle>
+                <Dropdown.Menu className="dropdownMenu_session">
+                  <Dropdown.Item className="myUser_button" >{myUser} {userLoggedIn.userInfo.username} </Dropdown.Item>
+                  <Dropdown.Item className="logOut_button" onClick={handleLogOut}>{logout_button}</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </div>
+          )}
         </div>
 
-        
-        <div
-          className={`navLink__container${
-            buttonMobile ? "_closed" : "_open"
-          } navbardesktop`}
-        >
-          <ul className="navLinks">
-            <Link to={"/"} onClick={() => setButtonMobile(true)}>
-              <NavBarLink text={useChangeLang("header.navbar.links.link1_text")} route={"/"} keyId={1} />
-            </Link>
-            <a href="/#myInfo" onClick={() => setButtonMobile(true)}>
-              <NavBarLink text={useChangeLang("header.navbar.links.link2_text")} route={"#"} keyId={2} />
-            </a>
-            <a href="/#Knowledge" onClick={() => setButtonMobile(true)}>
-              <NavBarLink text={useChangeLang("header.navbar.links.link3_text")} keyId={3} />
-            </a>
-            <a href="/#contact" onClick={() => setButtonMobile(true)}>
-              <NavBarLink text={useChangeLang("header.navbar.links.link4_text")} keyId={4} />
-            </a>
-          </ul>
-          <div className="session__container">
-            {userLoggedIn.userInfo === null ? (
-              <div className="textSession">
-                <Link onClick={() => setButtonMobile(true)} className="textlogin" to={"/login"}>
-                {login_msg}
-                </Link>
-              </div>
-            ) : (
-              <div className="dropdownSession_container">
-                <Dropdown className="dropdown_user">
-                  <Dropdown.Toggle className="dropdown_toggle_session"  id="dropdown-basic">
-                  {myProfile}
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu className="dropdownMenu_session">
-                    <Dropdown.Item >{myUser} {userLoggedIn.userInfo.username} </Dropdown.Item>
-                    <Dropdown.Item className="logOut_button" onClick={handleLogOut}>{logout_button}</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </div>
-            )}
-          </div>
-          <div className="lang_flags_container">
-            <div onClick={() => setButtonMobile(true)}>
-              <button className="button_flags" onClick={() => handlerLang("es")}>
-              <img src={spain_flag} alt={useChangeLang("header.navbar.alt_msg_changeLang_es")} />
-              </button>
-            </div>
-            <div onClick={() => setButtonMobile(true)}> 
-            <button  className="button_flags" onClick={() => handlerLang("en")}>
-              <img src={uk_flag} alt={useChangeLang("header.navbar.alt_msg_changeLang_en")} />
-              </button>
-            </div>
-          </div>
-        </div>
-        
       </div>
-      
     </nav>
-    
+
   );
 };
 

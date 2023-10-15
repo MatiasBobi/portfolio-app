@@ -30,6 +30,7 @@ const FormContact = () => {
   const [description, setDescription] = useState("");
   const [mailSentReq, setMailSentReq] = useState(false);
   const [mailSentMsg, setMailSentMsg] = useState("");
+  const [isLoading, setIsLoading] = useState(false)
   //
 
   // Server response status
@@ -70,7 +71,9 @@ const FormContact = () => {
       });
 
       const { isError } = res.data;
-
+      
+        setIsLoading(true)
+        setMailSentMsg("CARGANDO MENSAJE...")
       if (isError) {
         setIsErrorMail(true);
         setMailSentMsg(error_send_mail_msg);
