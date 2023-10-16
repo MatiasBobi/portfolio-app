@@ -37,7 +37,9 @@
     justify-content: center;
     align-items: center;
 } 
-
+.textMyInfo_container{
+    font-size: 1.2vw;
+}
 .buttonCV_container{
     display: flex;
     place-items: center;

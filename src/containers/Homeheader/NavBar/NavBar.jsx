@@ -1,6 +1,6 @@
 import NavBarLink from "./NavBarLink/NavBarLink";
 import "./NavBar.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // redux functions
 import { useSelector } from "react-redux/es/hooks/useSelector";
@@ -129,7 +129,7 @@ const NavBar = () => {
           </div>
         
           <div className={`lang_flags_container ${flagModal ? "desktopFlags" : "desktopFlags_off"}`}>
-          <span class="top-bot top-bot-border"></span>
+          <span className="top-bot top-bot-border"></span>
             <div onClick={() => {
               setButtonMobile(true)
               setChangeFlag("es")

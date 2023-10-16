@@ -117,7 +117,7 @@
           "verify": "Data dont match.",
           "dontMatchPass": "Passwords do not match.",
           "errorRegister": "Error trying to register.",
-          "userexist": "The user already exists."
+          "userexist": "The user or mail already exists."
         }
       },
       "loginFetch": {
