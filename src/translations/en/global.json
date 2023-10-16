@@ -54,7 +54,8 @@
       "success_msg": "The mail was successfully sent",
       "button_text": "Send mail",
       "wp_placeholder" : "Type your message here!",
-      "button_wp_text" : "Send WhatsApp"
+      "button_wp_text" : "Send WhatsApp",
+      "sendMailMsg": "Sending message..."
     },
     "knowledge": {
       "title": "My knowledge",
@@ -128,6 +129,7 @@
         }
       },
       "serverOFF": "ERROR: The server is not responding.",
+      "loadingMsg" : "Loading...",
       "formLogin": {
         "title": "Login",
         "email_placeholder": "Enter your email",

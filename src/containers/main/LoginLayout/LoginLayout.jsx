@@ -33,6 +33,7 @@ const loginSuccess = useChangeLang("main.loginLayout.loginFetch.statusMsg.succes
 const loginError = useChangeLang("main.loginLayout.loginFetch.statusMsg.loginError")
 const loginDontMatchData = useChangeLang("main.loginLayout.loginFetch.statusMsg.dontMatchData")
 const serverOFF = useChangeLang("main.loginLayout.serverOFF")
+const loadingMsg = useChangeLang("main.loginLayout.loadingMsg")
 //
 
 // Functions for status management
@@ -84,7 +85,7 @@ const serverOFF = useChangeLang("main.loginLayout.serverOFF")
   // Loading toastify
     useEffect(() =>{
       if(isLoading) {
-        toastId.current = toast.loading("Cargando...")
+        toastId.current = toast.loading(loadingMsg)
       } else {
         toast.dismiss(toastId.current)
       }
