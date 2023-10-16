@@ -34,16 +34,6 @@ const FormContact = () => {
   const [isLoading, setIsLoading] = useState(false)
   //
 
-  // Loading modal
-  useEffect(() => {
-    if (isLoading === true) {
-      setMailSentMsg("Enviando mensaje...")
-      setMailSentReq(true);
-    }
-
-  }, [isLoading])
-  //
-
   // Server response status
   const [isErrorMail, setIsErrorMail] = useState(false);
   //
@@ -60,6 +50,7 @@ const FormContact = () => {
   const wpPlaceHolder = useChangeLang("main.formContact.wp_placeholder")
   const textSendWpButton = useChangeLang("main.formContact.button_wp_text")
   const textSubmitButton = useChangeLang("main.formContact.button_text")
+
   //
 
   // Server response texts
@@ -67,8 +58,19 @@ const FormContact = () => {
   const success_msg = useChangeLang("main.formContact.success_msg");
   const error_msg = useChangeLang("main.formContact.error_msg");
   const error_server_off = useChangeLang("main.formContact.error_server_off");
-
+  const sendMailMsg = useChangeLang("main.formContact.sendMailMsg")
   //
+
+  // Loading modal
+  useEffect(() => {
+    if (isLoading === true) {
+      setMailSentMsg(sendMailMsg)
+      setMailSentReq(true);
+    }
+
+  }, [isLoading])
+  //
+
   // submit function (MAIL)
   const handlerSubmit = async (e) => {
     e.preventDefault();
@@ -204,7 +206,7 @@ const FormContact = () => {
           <div className="msg_container">
             {
               isLoading ?
-                <ClipLoader color="#36d7b7" size={75}/>
+                <ClipLoader color="#36d7b7" size={75} />
                 :
                 isErrorMail ? (
                   <FontAwesomeIcon

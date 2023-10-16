@@ -53,7 +53,8 @@
       "success_msg": "El mail fue enviado exitosamente",
       "button_text": "Enviar mail",
       "wp_placeholder" : "Escribí tu mensaje aquí!",
-      "button_wp_text" : "Enviar WhatsApp"
+      "button_wp_text" : "Enviar WhatsApp",
+      "sendMailMsg": "Enviando mail..."
     },
     "knowledge": {
       "title": "Mis conocimientos",
@@ -127,6 +128,7 @@
         }
       },
       "serverOFF": "El servidor no responde para realizar la consulta.",
+      "loadingMsg" : "Cargando...",
       "formLogin": {
         "title": "Iniciar sesión",
         "email_placeholder": "Ingresar email",
