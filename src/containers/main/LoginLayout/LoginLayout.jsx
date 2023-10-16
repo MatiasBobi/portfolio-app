@@ -69,6 +69,8 @@ const serverOFF = useChangeLang("main.loginLayout.serverOFF")
   const [mailFocus, setMailFocus] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
+  const toastId = useRef(null);
   //
 
   // Verification if a user is already logged in
@@ -77,6 +79,16 @@ const serverOFF = useChangeLang("main.loginLayout.serverOFF")
       navigate("/");
     }
   }, [navigate, userInfo]);
+  //
+
+  // Loading toastify
+    useEffect(() =>{
+      if(isLoading) {
+        toastId.current = toast.loading("Cargando...")
+      } else {
+        toast.dismiss(toastId.current)
+      }
+    }, [isLoading])
   //
 
   // regex validations
@@ -116,9 +128,10 @@ const serverOFF = useChangeLang("main.loginLayout.serverOFF")
   // submit register fuction
   const handleSubmitRegister = async (e) => {
     e.preventDefault();
-
+    setIsLoading(true)
     const verify1 = USER_REGEX.test(usernameRegister);
     const verify2 = PWD_REGEX.test(passRegister);
+    const loadingOK = false
 
     if (!verify1 || !verify2) {
       setErrorMsg(verifyRegisterData);
@@ -127,6 +140,7 @@ const serverOFF = useChangeLang("main.loginLayout.serverOFF")
 
     try {
       if(passRegister !== matchPassRegister){
+        setIsLoading(loadingOK)
         setIsError(true)
         setErrorMsg(registerdontMatchpass)
         setTimeout(() => {
@@ -143,18 +157,25 @@ const serverOFF = useChangeLang("main.loginLayout.serverOFF")
       setMailRegister("");
       setPassRegister("");
       setMatchPassRegister("")
+      setIsLoading(loadingOK)
       dispatch(setUserInfo({ ...res}));
       navigate("/");
     } catch (error) {
       if (!error) {
+        toast.error(registerError)
         setIsError(true)
         setErrorMsg(registerError);
+        setIsLoading(loadingOK)
         setTimeout(() => setIsError(false), 3000)
       } else if (error.status === 409) {
         setIsError(true)
+        toast.error(registerUserExists)
+        setIsLoading(loadingOK)
         setErrorMsg(registerUserExists);
       } else {
+        toast.error(serverOFF)
         setIsError(true)
+        setIsLoading(loadingOK)
         setErrorMsg(serverOFF);
       }
       errRef.current.focus();
@@ -167,21 +188,26 @@ const serverOFF = useChangeLang("main.loginLayout.serverOFF")
 
   const handleSubmiteLogin = async (e) => {
     e.preventDefault();
-
+    setIsLoading(true)
+    const loadingOK = false
     try {
       const res = await login({
         email: mailLogin,
         password: passLogin,
       }).unwrap();
+      setIsLoading(loadingOK)
       toast.success(loginSuccess);
       dispatch(setUserInfo({ ...res }));
       navigate("/");
     } catch (error) {
       if (!error) {
+        setIsLoading(loadingOK)
         toast.error(loginError);
       } else if (error.status === 501) {
+        setIsLoading(loadingOK)
         toast.error(loginDontMatchData);
       } else {
+        setIsLoading(loadingOK)
         toast.error(serverOFF);
       }
     }
@@ -425,6 +451,7 @@ const serverOFF = useChangeLang("main.loginLayout.serverOFF")
               </div>
               <div className="inputLoginForm_container">
                 <button
+                  
                   className={`input_container buttonRegister submitButton ${
                     !validUser || !validMail || !validPwd || !validMatch
                       ? "button_OFF"

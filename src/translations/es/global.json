@@ -116,7 +116,7 @@
           "verify": "Los datos no coinciden.",
           "dontMatchPass": "Las contraseñas no coinciden.",
           "errorRegister": "Error al intentar registrarse.",
-          "userexist": "El usuario ya existe."
+          "userexist": "El usuario o mail ya existe."
         }
       },
       "loginFetch": {

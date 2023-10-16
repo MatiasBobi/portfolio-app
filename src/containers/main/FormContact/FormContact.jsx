@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./FormContact.css";
 import axios from "axios";
 
@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 
 // Icons and Images
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faCheckCircle,faTimesCircle,} from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle, faSpinner, faTimesCircle, } from "@fortawesome/free-solid-svg-icons";
 import ReactWhatsapp from "react-whatsapp";
 import whatsappIcon from "../../../assets/img/whatsappIcon.png";
 import gmailIcon from "../../../assets/img/gmail.png";
@@ -16,6 +16,7 @@ import gmailIcon from "../../../assets/img/gmail.png";
 
 // Functions of language change 
 import { useChangeLang } from "../../../hooks/useChangeLang";
+import { ClipLoader } from "react-spinners";
 //
 
 const FormContact = () => {
@@ -31,6 +32,16 @@ const FormContact = () => {
   const [mailSentReq, setMailSentReq] = useState(false);
   const [mailSentMsg, setMailSentMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false)
+  //
+
+  // Loading modal
+  useEffect(() => {
+    if (isLoading === true) {
+      setMailSentMsg("Enviando mensaje...")
+      setMailSentReq(true);
+    }
+
+  }, [isLoading])
   //
 
   // Server response status
@@ -58,26 +69,25 @@ const FormContact = () => {
   const error_server_off = useChangeLang("main.formContact.error_server_off");
 
   //
-
   // submit function (MAIL)
   const handlerSubmit = async (e) => {
     e.preventDefault();
-
+    setIsLoading(true)
     try {
+
       const res = await axios.post("https://server-portfolio-8wal.onrender.com/mail/sendmail", {
         subject: subject,
         from: from,
         description: description,
       });
-
+      const loadingsuccess = false;
       const { isError } = res.data;
-      
-        setIsLoading(true)
-        setMailSentMsg("CARGANDO MENSAJE...")
+
       if (isError) {
         setIsErrorMail(true);
         setMailSentMsg(error_send_mail_msg);
       }
+      setIsLoading(loadingsuccess)
       setMailSentMsg(success_msg);
       setMailSentReq(true);
       setTimeout(() => {
@@ -85,6 +95,7 @@ const FormContact = () => {
         setIsErrorMail(false);
         setMailSentMsg("");
       }, 4000);
+
     } catch (error) {
       if (error.code === "ERR_NETWORK") {
         setMailSentMsg(error_msg);
@@ -110,9 +121,8 @@ const FormContact = () => {
     <section id="contactform_container">
       <div
         ref={myRef}
-        className={`contact_container elementVisibility${
-          myElementIsVisible ? "_visible" : "_hidden"
-        }`}
+        className={`contact_container elementVisibility${myElementIsVisible ? "_visible" : "_hidden"
+          }`}
         id="contact" >
         <div
           className="button_changeType_contact"
@@ -126,26 +136,26 @@ const FormContact = () => {
         </div>
         <h2 className="titleFormContact_container">{useChangeLang("main.formContact.form_title")}</h2>
         {changeForm ? <h3>WhatsApp</h3> : <h3>Mail</h3>}
-        {changeForm ? 
+        {changeForm ?
 
 
-        <div className="wpForm_container">
-              <input
+          <div className="wpForm_container">
+            <input
               className="inputContact"
-                type="text"
-                value={msgWp}
-                required
-                placeholder={wpPlaceHolder}
-                onChange={(e) => setMsgWp(e.target.value)}
-              />
-              <ReactWhatsapp className="inputContact whatsappSend_button" number="54-381-649-2029" message={msgWp}>{textSendWpButton}
-              </ReactWhatsapp>
-            </div>
-        
-          : 
-            
-            <div className="mailForm_container">
-              <form onSubmit={handlerSubmit} className="formContact_container">
+              type="text"
+              value={msgWp}
+              required
+              placeholder={wpPlaceHolder}
+              onChange={(e) => setMsgWp(e.target.value)}
+            />
+            <ReactWhatsapp className="inputContact whatsappSend_button" number="54-381-649-2029" message={msgWp}>{textSendWpButton}
+            </ReactWhatsapp>
+          </div>
+
+          :
+
+          <div className="mailForm_container">
+            <form onSubmit={handlerSubmit} className="formContact_container">
               <div className="input_container">
                 <input
                   className="inputContact"
@@ -177,29 +187,35 @@ const FormContact = () => {
                   onChange={(e) => setDescription(e.target.value)}
                 />
               </div>
-              
-              <input
-                    className="input_container submitButton"
-                    type="submit"
-                    value={textSubmitButton}
-                  />
-                  </form>
-            </div>
-          }
 
-        
+              <input
+                className="input_container submitButton"
+                type="submit"
+                value={textSubmitButton}
+              />
+            </form>
+          </div>
+        }
+
+
         <div
           className={`mailMessage_container_${mailSentReq ? "show" : "hidden"}`}
         >
           <div className="msg_container">
-            {isErrorMail ? (
-              <FontAwesomeIcon
-                className="msgIcon errorCheck"
-                icon={faTimesCircle}
-              />
-            ) : (
-              <FontAwesomeIcon className="msgIcon" icon={faCheckCircle} />
-            )}
+            {
+              isLoading ?
+                <ClipLoader color="#36d7b7" size={75}/>
+                :
+                isErrorMail ? (
+                  <FontAwesomeIcon
+                    className="msgIcon errorCheck"
+                    icon={faTimesCircle}
+                  />
+                ) : (
+                  <FontAwesomeIcon className="msgIcon" icon={faCheckCircle} />
+                )
+
+            }
             <p>{mailSentMsg}</p>
           </div>
         </div>
