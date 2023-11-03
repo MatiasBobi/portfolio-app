@@ -38,7 +38,7 @@
     align-items: center;
 } 
 .textMyInfo_container{
-    font-size: 1.2vw;
+    font-size: 1.1rem;
 }
 .buttonCV_container{
     display: flex;
@@ -104,5 +104,8 @@
     .photo_container img{
         width: 428px;
         height: 600px;
+    }
+    .textMyInfo_container{
+        font-size: 1.2rem;
     }
 }

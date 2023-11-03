@@ -179,6 +179,11 @@
         "imgAlt": "Api REST sobre equipos de futbol",
         "title": "Proyecto backend",
         "text": "Api REST basada sobre jugadores de futbol. Desarollada como proyecto para backend utilizando NodeJs, Express y MongoDB"
+      },
+      "card3": {
+        "imgAlt": "Librería sencilla",
+        "title": "Librería sencilla",
+        "text": "Una librería sencilla para utilizar métodos para manejar arreglos."
       }
     },
     "myInfo": {

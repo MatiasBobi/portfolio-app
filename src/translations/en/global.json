@@ -180,6 +180,11 @@
         "imgAlt": "REST Api on soccer teams",
         "title": "Backend project",
         "text": "REST Api based on soccer players. Developed as a backend project using NodeJs, Express and MongoDB."
+      },
+      "card3": {
+        "imgAlt": "Simple bookstore",
+        "title": "Simple bookstore",
+        "text": "A simple library for using methods to handle arrays."
       }
     },
     "myInfo": {
