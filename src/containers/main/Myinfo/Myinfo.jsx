@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //
 
-
 // Function to see if the element is visible or not
 import { useInView } from "react-intersection-observer";
 //
@@ -36,7 +35,7 @@ const Myinfo = () => {
           </p>
         </div>
         <div className="buttonCV_container item">
-          <Link to="https://drive.google.com/uc?export=download&id=1hKAj9NJ_pZONYJyr-Z5T82FEIViRqrf7">
+          <Link to="https://drive.google.com/uc?export=download&id=1c0wJqqKfUKK5fnVnIi1RP5lD2ximP-l6">
             <button
               className={`buttonCV_link hover`}
               onMouseEnter={handlerIcon}

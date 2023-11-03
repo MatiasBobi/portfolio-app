@@ -13,7 +13,8 @@ import CardApps from "../CardApps/CardApps";
 
 // Images
 import jober from "../../../assets/img/jober.png";
-import numen from "../../../assets/img/numen.png"
+import numen from "../../../assets/img/numen.png";
+import libreria from "../../../assets/img/libreria.png";
 //
 
 // Function to see if the element is visible or not
@@ -21,11 +22,15 @@ import { useInView } from "react-intersection-observer";
 //
 
 const MyApps = () => {
-
-const {ref: myRef, inView: myElementIsVisible} = useInView()
+  const { ref: myRef, inView: myElementIsVisible } = useInView();
 
   return (
-    <div ref={myRef} className={`myApps_container elementVisibility${myElementIsVisible ? '_visible' : '_hidden'}`}>
+    <div
+      ref={myRef}
+      className={`myApps_container elementVisibility${
+        myElementIsVisible ? "_visible" : "_hidden"
+      }`}
+    >
       <h2>{useChangeLang("main.myApps.title")}</h2>
       <Swiper
         slidesPerView={1}
@@ -55,6 +60,16 @@ const {ref: myRef, inView: myElementIsVisible} = useInView()
             title={useChangeLang("main.myApps.card2.title")}
             text={useChangeLang("main.myApps.card2.text")}
             linkRepo="https://github.com/MatiasBobi/Proyecto-Backend"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CardApps
+            img={libreria}
+            imgAlt={useChangeLang("main.myApps.card3.imgAlt")}
+            title={useChangeLang("main.myApps.card3.title")}
+            text={useChangeLang("main.myApps.card3.text")}
+            linkApp="https://matias-bobi-libreria.netlify.app"
+            linkRepo="https://github.com/MatiasBobi/Libreria-sencilla"
           />
         </SwiperSlide>
       </Swiper>
