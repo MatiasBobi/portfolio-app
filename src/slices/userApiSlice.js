@@ -1,26 +1,25 @@
 import { apiSlice } from "./apiSlice";
 
-const USERS_URL = 'https://server-portfolio-8wal.onrender.com/auth'
+export const WEB_API =
+  "https://matias-leonardo-bobi-server-portfolio.up.railway.app";
 
 export const usersApiSlice = apiSlice.injectEndpoints({
-    endpoints: (builder) => ({
-        login: builder.mutation({
-            query: data => ({
-                url: `${USERS_URL}/login`,
-                method: 'POST',
-                body: data
-            })
-        }),
-        register: builder.mutation({
-            query: data => ({
-                url: `${USERS_URL}/register`,
-                method: 'POST',
-                body: data
-            })
-        })
-    })
-})
+  endpoints: (builder) => ({
+    login: builder.mutation({
+      query: (data) => ({
+        url: `${WEB_API}/auth/login`,
+        method: "POST",
+        body: data,
+      }),
+    }),
+    register: builder.mutation({
+      query: (data) => ({
+        url: `${WEB_API}/auth/register`,
+        method: "POST",
+        body: data,
+      }),
+    }),
+  }),
+});
 
-
-
-export const {useLoginMutation, useRegisterMutation} = usersApiSlice
+export const { useLoginMutation, useRegisterMutation } = usersApiSlice;
