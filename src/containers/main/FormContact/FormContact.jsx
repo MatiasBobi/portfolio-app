@@ -1,27 +1,30 @@
 import { useEffect, useState } from "react";
 import "./FormContact.css";
 import axios from "axios";
-
+import { WEB_API } from "../../../slices/userApiSlice";
 // Function to see if the element is visible or not
 import { useInView } from "react-intersection-observer";
 //
 
 // Icons and Images
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faSpinner, faTimesCircle, } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheckCircle,
+  faSpinner,
+  faTimesCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import ReactWhatsapp from "react-whatsapp";
 import whatsappIcon from "../../../assets/img/whatsappIcon.png";
 import gmailIcon from "../../../assets/img/gmail.png";
 //
 
-// Functions of language change 
+// Functions of language change
 import { useChangeLang } from "../../../hooks/useChangeLang";
 import { ClipLoader } from "react-spinners";
 //
 
 const FormContact = () => {
-
-  // Hook to know if an item is being viewed 
+  // Hook to know if an item is being viewed
   const { ref: myRef, inView: myElementIsVisible } = useInView();
   //
 
@@ -31,7 +34,7 @@ const FormContact = () => {
   const [description, setDescription] = useState("");
   const [mailSentReq, setMailSentReq] = useState(false);
   const [mailSentMsg, setMailSentMsg] = useState("");
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   //
 
   // Server response status
@@ -44,40 +47,46 @@ const FormContact = () => {
   //
 
   //TEXT PLACEHOLDER & Buttons
-  const contactPlaceHolder = useChangeLang("main.formContact.contact_placeholder");
-  const textAreaPlaceHolder = useChangeLang("main.formContact.textarea_placeholder")
-  const subjectPlaceHolder = useChangeLang("main.formContact.subject_placeholder")
-  const wpPlaceHolder = useChangeLang("main.formContact.wp_placeholder")
-  const textSendWpButton = useChangeLang("main.formContact.button_wp_text")
-  const textSubmitButton = useChangeLang("main.formContact.button_text")
+  const contactPlaceHolder = useChangeLang(
+    "main.formContact.contact_placeholder"
+  );
+  const textAreaPlaceHolder = useChangeLang(
+    "main.formContact.textarea_placeholder"
+  );
+  const subjectPlaceHolder = useChangeLang(
+    "main.formContact.subject_placeholder"
+  );
+  const wpPlaceHolder = useChangeLang("main.formContact.wp_placeholder");
+  const textSendWpButton = useChangeLang("main.formContact.button_wp_text");
+  const textSubmitButton = useChangeLang("main.formContact.button_text");
 
   //
 
   // Server response texts
-  const error_send_mail_msg = useChangeLang("main.formContact.error_send_mail_msg");
+  const error_send_mail_msg = useChangeLang(
+    "main.formContact.error_send_mail_msg"
+  );
   const success_msg = useChangeLang("main.formContact.success_msg");
   const error_msg = useChangeLang("main.formContact.error_msg");
   const error_server_off = useChangeLang("main.formContact.error_server_off");
-  const sendMailMsg = useChangeLang("main.formContact.sendMailMsg")
+  const sendMailMsg = useChangeLang("main.formContact.sendMailMsg");
   //
 
   // Loading modal
   useEffect(() => {
     if (isLoading === true) {
-      setMailSentMsg(sendMailMsg)
+      setMailSentMsg(sendMailMsg);
       setMailSentReq(true);
     }
-
-  }, [isLoading])
+  }, [isLoading]);
   //
 
   // submit function (MAIL)
   const handlerSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true)
+    setIsLoading(true);
     try {
-
-      const res = await axios.post("https://server-portfolio-8wal.onrender.com/mail/sendmail", {
+      const res = await axios.post(`${WEB_API}/mail/sendmail`, {
         subject: subject,
         from: from,
         description: description,
@@ -89,7 +98,7 @@ const FormContact = () => {
         setIsErrorMail(true);
         setMailSentMsg(error_send_mail_msg);
       }
-      setIsLoading(loadingsuccess)
+      setIsLoading(loadingsuccess);
       setMailSentMsg(success_msg);
       setMailSentReq(true);
       setTimeout(() => {
@@ -97,7 +106,6 @@ const FormContact = () => {
         setIsErrorMail(false);
         setMailSentMsg("");
       }, 4000);
-
     } catch (error) {
       if (error.code === "ERR_NETWORK") {
         setMailSentMsg(error_msg);
@@ -117,15 +125,15 @@ const FormContact = () => {
 
   //
 
-
-
   return (
     <section id="contactform_container">
       <div
         ref={myRef}
-        className={`contact_container elementVisibility${myElementIsVisible ? "_visible" : "_hidden"
-          }`}
-        id="contact" >
+        className={`contact_container elementVisibility${
+          myElementIsVisible ? "_visible" : "_hidden"
+        }`}
+        id="contact"
+      >
         <div
           className="button_changeType_contact"
           onClick={() => setChangeForm(!changeForm)}
@@ -136,11 +144,11 @@ const FormContact = () => {
             <img src={whatsappIcon} alt="" />
           )}
         </div>
-        <h2 className="titleFormContact_container">{useChangeLang("main.formContact.form_title")}</h2>
+        <h2 className="titleFormContact_container">
+          {useChangeLang("main.formContact.form_title")}
+        </h2>
         {changeForm ? <h3>WhatsApp</h3> : <h3>Mail</h3>}
-        {changeForm ?
-
-
+        {changeForm ? (
           <div className="wpForm_container">
             <input
               className="inputContact"
@@ -150,12 +158,15 @@ const FormContact = () => {
               placeholder={wpPlaceHolder}
               onChange={(e) => setMsgWp(e.target.value)}
             />
-            <ReactWhatsapp className="inputContact whatsappSend_button" number="54-381-649-2029" message={msgWp}>{textSendWpButton}
+            <ReactWhatsapp
+              className="inputContact whatsappSend_button"
+              number="54-381-649-2029"
+              message={msgWp}
+            >
+              {textSendWpButton}
             </ReactWhatsapp>
           </div>
-
-          :
-
+        ) : (
           <div className="mailForm_container">
             <form onSubmit={handlerSubmit} className="formContact_container">
               <div className="input_container">
@@ -197,27 +208,22 @@ const FormContact = () => {
               />
             </form>
           </div>
-        }
-
+        )}
 
         <div
           className={`mailMessage_container_${mailSentReq ? "show" : "hidden"}`}
         >
           <div className="msg_container">
-            {
-              isLoading ?
-                <ClipLoader color="#36d7b7" size={75} />
-                :
-                isErrorMail ? (
-                  <FontAwesomeIcon
-                    className="msgIcon errorCheck"
-                    icon={faTimesCircle}
-                  />
-                ) : (
-                  <FontAwesomeIcon className="msgIcon" icon={faCheckCircle} />
-                )
-
-            }
+            {isLoading ? (
+              <ClipLoader color="#36d7b7" size={75} />
+            ) : isErrorMail ? (
+              <FontAwesomeIcon
+                className="msgIcon errorCheck"
+                icon={faTimesCircle}
+              />
+            ) : (
+              <FontAwesomeIcon className="msgIcon" icon={faCheckCircle} />
+            )}
             <p>{mailSentMsg}</p>
           </div>
         </div>
