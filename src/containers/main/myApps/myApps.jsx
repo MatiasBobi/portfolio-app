@@ -15,6 +15,7 @@ import CardApps from "../CardApps/CardApps";
 import jober from "../../../assets/img/jober.png";
 import numen from "../../../assets/img/numen.png";
 import libreria from "../../../assets/img/libreria.png";
+import danmar from "../../../assets/img/DanMar.png";
 //
 
 // Function to see if the element is visible or not
@@ -74,7 +75,7 @@ const MyApps = () => {
         </SwiperSlide>
         <SwiperSlide>
           <CardApps
-            img={libreria}
+            img={danmar}
             imgAlt={useChangeLang("main.myApps.card4.imgAlt")}
             title={useChangeLang("main.myApps.card4.title")}
             text={useChangeLang("main.myApps.card4.text")}
