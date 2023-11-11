@@ -185,6 +185,11 @@
         "imgAlt": "Simple bookstore",
         "title": "Simple bookstore",
         "text": "A simple library for using methods to handle arrays."
+      },
+      "card4": {
+        "imgAlt": "Products Company",
+        "title": "Products Company",
+        "text": "Page made with tailwind and using mercadolibre API."
       }
     },
     "myInfo": {

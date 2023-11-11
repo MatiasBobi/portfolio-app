@@ -72,6 +72,16 @@ const MyApps = () => {
             linkRepo="https://github.com/MatiasBobi/Libreria-sencilla"
           />
         </SwiperSlide>
+        <SwiperSlide>
+          <CardApps
+            img={libreria}
+            imgAlt={useChangeLang("main.myApps.card4.imgAlt")}
+            title={useChangeLang("main.myApps.card4.title")}
+            text={useChangeLang("main.myApps.card4.text")}
+            linkApp="https://matias-bobi-dan-mar.netlify.app"
+            linkRepo="https://github.com/MatiasBobi/Dan-Mar"
+          />
+        </SwiperSlide>
       </Swiper>
     </div>
   );

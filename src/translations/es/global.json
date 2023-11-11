@@ -184,6 +184,11 @@
         "imgAlt": "Librería sencilla",
         "title": "Librería sencilla",
         "text": "Una librería sencilla para utilizar métodos para manejar arreglos."
+      },
+      "card4": {
+        "imgAlt": "Empresa de productos",
+        "title": "Empresa de productos",
+        "text": "Pagina realizada con tailwind y usando la API de mercadolibre."
       }
     },
     "myInfo": {
